@@ -6,7 +6,7 @@ app.get('/makers/:name', (req, res) => {
     const {name} = req.params;
     if(!name) res.send(`<h1>Hola desconocido!</h1>`);
     else {
-        res.send(`<h1>Hola ${name}!</h1>`);
+        res.send(`<h1>Hola ${name.charAt(0).toUpperCase() + name.slice(1)}!</h1>`);
     }
 });
 
